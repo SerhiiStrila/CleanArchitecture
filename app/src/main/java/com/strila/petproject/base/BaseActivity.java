@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
 
-import com.strila.petproject.App;
-import com.strila.petproject.di.activity.HasActivitySubComponentBuilders;
-import com.strila.petproject.di.fragment.FragmentComponentBuilder;
-import com.strila.petproject.di.fragment.HasFragmentSubComponentBuilders;
+import com.strila.petproject.app.App;
+import com.strila.petproject.di.base.activity.HasActivitySubComponentBuilders;
+import com.strila.petproject.di.base.fragment.FragmentComponentBuilder;
+import com.strila.petproject.di.base.fragment.HasFragmentSubComponentBuilders;
 
 import java.util.Map;
 

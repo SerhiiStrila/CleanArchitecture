@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
 
-import com.strila.petproject.di.fragment.HasFragmentSubComponentBuilders;
+import com.strila.petproject.di.base.fragment.HasFragmentSubComponentBuilders;
 
 
 /**

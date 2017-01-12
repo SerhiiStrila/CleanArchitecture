@@ -1,4 +1,4 @@
-package com.strila.petproject.di.activity;
+package com.strila.petproject.di.base.activity;
 
 import android.app.Activity;
 

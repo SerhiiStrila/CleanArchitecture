@@ -1,9 +1,11 @@
-package com.strila.petproject.di.activity;
+package com.strila.petproject.app;
 
 import com.strila.petproject.activity.activity1.MainActivity;
+import com.strila.petproject.activity.activity1.MainActivityComponent;
 import com.strila.petproject.activity.activity2.MainActivity2;
 import com.strila.petproject.activity.activity2.MainActivity2Component;
-import com.strila.petproject.activity.activity1.MainActivityComponent;
+import com.strila.petproject.di.base.activity.ActivityComponentBuilder;
+import com.strila.petproject.di.base.activity.ActivityKey;
 
 import dagger.Binds;
 import dagger.Module;

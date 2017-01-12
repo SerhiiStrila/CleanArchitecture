@@ -1,4 +1,4 @@
-package com.strila.petproject.di.fragment;
+package com.strila.petproject.di.base.fragment;
 
 /**
  * Created by Serhii Strila on 1/11/17

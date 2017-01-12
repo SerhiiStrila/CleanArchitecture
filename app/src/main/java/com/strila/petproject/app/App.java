@@ -1,11 +1,10 @@
-package com.strila.petproject;
+package com.strila.petproject.app;
 
 import android.app.Activity;
 import android.app.Application;
 
-import com.strila.petproject.di.DaggerApplicationComponent;
-import com.strila.petproject.di.activity.ActivityComponentBuilder;
-import com.strila.petproject.di.activity.HasActivitySubComponentBuilders;
+import com.strila.petproject.di.base.activity.ActivityComponentBuilder;
+import com.strila.petproject.di.base.activity.HasActivitySubComponentBuilders;
 
 import java.util.Map;
 
@@ -23,7 +22,7 @@ public class App extends Application implements HasActivitySubComponentBuilders 
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerApplicationComponent.create().inject(this);
+        DaggerAppComponent.create().inject(this);
     }
 
     @Override

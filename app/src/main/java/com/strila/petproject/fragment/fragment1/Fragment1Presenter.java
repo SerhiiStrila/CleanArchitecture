@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.strila.petproject.activity.activity1.MainActivityRouter;
 import com.strila.petproject.base.BasePresenter;
-import com.strila.petproject.di.fragment.FragmentScope;
+import com.strila.petproject.di.base.fragment.FragmentScope;
 
 import javax.inject.Inject;
 

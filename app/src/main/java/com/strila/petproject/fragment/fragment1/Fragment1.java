@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.strila.petproject.R;
 import com.strila.petproject.base.BaseFragment;
-import com.strila.petproject.di.fragment.HasFragmentSubComponentBuilders;
+import com.strila.petproject.di.base.fragment.HasFragmentSubComponentBuilders;
 
 import javax.inject.Inject;
 

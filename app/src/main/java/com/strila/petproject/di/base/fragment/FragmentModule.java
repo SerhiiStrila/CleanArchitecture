@@ -1,4 +1,4 @@
-package com.strila.petproject.di.fragment;
+package com.strila.petproject.di.base.fragment;
 
 import android.app.Fragment;
 
@@ -20,7 +20,7 @@ public abstract class FragmentModule<T extends Fragment> {
 
     @Provides
     @FragmentScope
-    public T provideFragment() {
+    T provideFragment() {
         return fragment;
     }
 }

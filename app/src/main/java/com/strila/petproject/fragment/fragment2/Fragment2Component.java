@@ -1,9 +1,9 @@
 package com.strila.petproject.fragment.fragment2;
 
-import com.strila.petproject.di.fragment.FragmentComponent;
-import com.strila.petproject.di.fragment.FragmentComponentBuilder;
-import com.strila.petproject.di.fragment.FragmentModule;
-import com.strila.petproject.di.fragment.FragmentScope;
+import com.strila.petproject.di.base.fragment.FragmentComponent;
+import com.strila.petproject.di.base.fragment.FragmentComponentBuilder;
+import com.strila.petproject.di.base.fragment.FragmentModule;
+import com.strila.petproject.di.base.fragment.FragmentScope;
 
 import dagger.Module;
 import dagger.Provides;

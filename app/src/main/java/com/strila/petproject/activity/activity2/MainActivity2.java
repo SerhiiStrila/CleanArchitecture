@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.strila.petproject.R;
 import com.strila.petproject.activity.activity1.MainActivityRouter;
 import com.strila.petproject.base.BaseActivity;
-import com.strila.petproject.di.activity.HasActivitySubComponentBuilders;
+import com.strila.petproject.di.base.activity.HasActivitySubComponentBuilders;
 
 import javax.inject.Inject;
 

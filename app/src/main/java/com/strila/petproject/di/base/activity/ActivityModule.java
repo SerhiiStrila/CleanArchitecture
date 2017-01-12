@@ -1,4 +1,4 @@
-package com.strila.petproject.di.activity;
+package com.strila.petproject.di.base.activity;
 
 import android.app.Activity;
 
@@ -19,7 +19,7 @@ public abstract class ActivityModule<T extends Activity> {
 
     @Provides
     @ActivityScope
-    public T provideActivity() {
+    T provideActivity() {
         return activity;
     }
 }

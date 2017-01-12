@@ -1,4 +1,4 @@
-package com.strila.petproject.di.activity;
+package com.strila.petproject.di.base.activity;
 
 /**
  * Created by Serhii Strila on 1/11/17

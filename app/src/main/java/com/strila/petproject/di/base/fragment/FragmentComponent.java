@@ -1,4 +1,4 @@
-package com.strila.petproject.di.fragment;
+package com.strila.petproject.di.base.fragment;
 
 import android.app.Fragment;
 
