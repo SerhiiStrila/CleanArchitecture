@@ -1,9 +1,17 @@
 package com.strila.petproject.activity.activity1;
 
+import android.app.Fragment;
+
 import com.strila.petproject.di.base.activity.ActivityComponent;
 import com.strila.petproject.di.base.activity.ActivityComponentBuilder;
 import com.strila.petproject.di.base.activity.ActivityModule;
 import com.strila.petproject.di.base.activity.ActivityScope;
+import com.strila.petproject.di.base.fragment.FragmentComponentBuilder;
+
+import java.util.Collections;
+import java.util.Map;
+
+import javax.inject.Provider;
 
 import dagger.Module;
 import dagger.Provides;
@@ -17,7 +25,7 @@ import dagger.Subcomponent;
 @Subcomponent(
         modules = {
                 MainActivityComponent.MainActivityModule.class,
-                MainActivityBindingModule.class
+//                MainActivityBindingModule.class
         }
 )
 public interface MainActivityComponent extends ActivityComponent<MainActivity> {
@@ -38,6 +46,12 @@ public interface MainActivityComponent extends ActivityComponent<MainActivity> {
         @Provides
         MainActivityRouter provideRouter(MainActivity activity) {
             return new MainActivityRouterImpl(activity);
+        }
+
+        @ActivityScope
+        @Provides
+        Map<Class<? extends Fragment>, Provider<FragmentComponentBuilder>> provideMap() {
+            return Collections.emptyMap();
         }
     }
 }

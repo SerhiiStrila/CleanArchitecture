@@ -11,6 +11,7 @@ import dagger.Provides;
 
 @Module
 public abstract class ActivityModule<T extends Activity> {
+
     protected final T activity;
 
     public ActivityModule(T activity) {
@@ -19,7 +20,7 @@ public abstract class ActivityModule<T extends Activity> {
 
     @Provides
     @ActivityScope
-    T provideActivity() {
+    public T provideActivity() {
         return activity;
     }
 }

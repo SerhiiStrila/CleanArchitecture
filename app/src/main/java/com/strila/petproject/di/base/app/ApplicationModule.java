@@ -20,7 +20,7 @@ public abstract class ApplicationModule<T extends Application> {
 
     @Provides
     @ApplicationScope
-    T provideApp() {
+    public T provideApp() {
         return app;
     }
 }

@@ -20,7 +20,7 @@ public abstract class FragmentModule<T extends Fragment> {
 
     @Provides
     @FragmentScope
-    T provideFragment() {
+    public T provideFragment() {
         return fragment;
     }
 }
