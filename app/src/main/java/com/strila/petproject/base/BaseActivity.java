@@ -26,6 +26,9 @@ public abstract class BaseActivity extends Activity implements HasFragmentSubCom
 
     @Override
     public FragmentComponentBuilder getFragmentComponentBuilder(Class<? extends Fragment> fragmentClass) {
+        if (mFragmentComponentBuilders == null) {
+            setupActivityComponent((App) getApplicationContext());
+        }
         return mFragmentComponentBuilders.get(fragmentClass).get();
     }
 

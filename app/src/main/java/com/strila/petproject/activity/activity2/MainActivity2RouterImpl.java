@@ -30,7 +30,6 @@ final class MainActivity2RouterImpl implements MainActivityRouter {
     private void baseInit() {
         FragmentManager fm = mActivity.getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.addToBackStack(Fragment2.class.getName());
         ft.replace(R.id.container, Fragment2.newInstance(), Fragment2.class.getName());
         ft.commit();
     }
