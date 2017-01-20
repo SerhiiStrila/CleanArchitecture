@@ -22,7 +22,10 @@ public class App extends Application implements HasActivitySubComponentBuilders 
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerAppComponent.create().inject(this);
+        DaggerAppComponent.builder()
+                .appModule(new AppComponent.AppModule(this))
+                .build()
+                .inject(this);
     }
 
     @Override

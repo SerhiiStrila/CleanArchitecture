@@ -5,8 +5,8 @@ import com.strila.petproject.di.base.fragment.FragmentComponentBuilder;
 import com.strila.petproject.di.base.fragment.FragmentModule;
 import com.strila.petproject.di.base.fragment.FragmentScope;
 
+import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 import dagger.Subcomponent;
 
 /**
@@ -15,7 +15,10 @@ import dagger.Subcomponent;
 
 @FragmentScope
 @Subcomponent(
-        modules = Fragment1Component.Fragment1Module.class
+        modules = {
+                Fragment1Component.Fragment1Module.class,
+                Fragment1Component.Fragment1ModuleBinds.class
+        }
 )
 public interface Fragment1Component extends FragmentComponent<Fragment1> {
 
@@ -31,10 +34,17 @@ public interface Fragment1Component extends FragmentComponent<Fragment1> {
             super(fragment);
         }
 
+    }
+
+    @Module
+    abstract class Fragment1ModuleBinds {
+
         @FragmentScope
-        @Provides
-        Fragment1Contract.View provideView(Fragment1 fragment) {
-            return fragment;
-        }
+        @Binds
+        abstract Fragment1Contract.View bindView(Fragment1 fragment1);
+
+        @FragmentScope
+        @Binds
+        abstract Fragment1Contract.Presenter bindPresenter(Fragment1Presenter presenter);
     }
 }

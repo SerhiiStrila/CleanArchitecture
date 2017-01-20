@@ -18,7 +18,7 @@ import javax.inject.Inject;
 
 public class Fragment1 extends BaseFragment<Fragment1Contract.Presenter> implements Fragment1Contract.View {
 
-    @Inject Fragment1Presenter presenter;
+    @Inject Fragment1Contract.Presenter presenter;
 
     public static Fragment1 newInstance() {
         Fragment1 fragment = new Fragment1();

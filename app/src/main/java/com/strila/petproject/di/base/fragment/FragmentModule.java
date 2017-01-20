@@ -18,8 +18,8 @@ public abstract class FragmentModule<T extends Fragment> {
         this.fragment = fragment;
     }
 
-    @Provides
     @FragmentScope
+    @Provides
     public T provideFragment() {
         return fragment;
     }
