@@ -21,9 +21,9 @@ import dagger.Module;
 interface AppComponent extends ApplicationComponent<App> {
 
     @Module
-    class AppModule extends ApplicationModule<App> {
+    final class AppModule extends ApplicationModule<App> {
 
-        public AppModule(App application) {
+        AppModule(App application) {
             super(application);
         }
     }

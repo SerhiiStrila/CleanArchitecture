@@ -13,7 +13,7 @@ import javax.inject.Inject;
  * Created by Serhii Strila on 1/11/17
  */
 
-public class MainActivity2 extends BaseActivity {
+public final class MainActivity2 extends BaseActivity {
 
     @Inject MainActivityRouter router;
 

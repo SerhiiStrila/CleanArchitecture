@@ -29,7 +29,7 @@ public interface MainActivity2Component extends ActivityComponent<MainActivity2>
     }
 
     @Module
-    class MainActivity2Module extends ActivityModule<MainActivity2> {
+    final class MainActivity2Module extends ActivityModule<MainActivity2> {
 
         MainActivity2Module(MainActivity2 activity) {
             super(activity);
@@ -37,7 +37,7 @@ public interface MainActivity2Component extends ActivityComponent<MainActivity2>
 
         @ActivityScope
         @Provides
-        MainActivityRouter provideRouter(MainActivity2 activity) {
+        static MainActivityRouter provideRouter(MainActivity2 activity) {
             return new MainActivity2RouterImpl(activity);
         }
     }

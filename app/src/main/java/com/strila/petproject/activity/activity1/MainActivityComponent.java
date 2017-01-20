@@ -28,7 +28,7 @@ public interface MainActivityComponent extends ActivityComponent<MainActivity> {
     }
 
     @Module
-    class MainActivityModule extends ActivityModule<MainActivity> {
+    final class MainActivityModule extends ActivityModule<MainActivity> {
 
         MainActivityModule(MainActivity activity) {
             super(activity);
@@ -36,13 +36,13 @@ public interface MainActivityComponent extends ActivityComponent<MainActivity> {
 
         @ActivityScope
         @Provides
-        MainActivityRouter provideRouter(MainActivity activity) {
+        static MainActivityRouter provideRouter(MainActivity activity) {
             return new MainActivityRouterImpl(activity);
         }
 
 //        @ActivityScope
 //        @Provides
-//        Map<Class<? extends Fragment>, Provider<FragmentComponentBuilder>> provideMap() {
+//        static Map<Class<? extends Fragment>, Provider<FragmentComponentBuilder>> provideMap() {
 //            return Collections.emptyMap();
 //        }
     }

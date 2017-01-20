@@ -16,7 +16,7 @@ import javax.inject.Inject;
  * Created by Serhii Strila on 1/11/17
  */
 
-public class Fragment1 extends BaseFragment<Fragment1Contract.Presenter> implements Fragment1Contract.View {
+public final class Fragment1 extends BaseFragment<Fragment1Contract.Presenter> implements Fragment1Contract.View {
 
     @Inject Fragment1Contract.Presenter presenter;
 

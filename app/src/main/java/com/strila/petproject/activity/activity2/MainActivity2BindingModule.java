@@ -20,15 +20,15 @@ import dagger.multibindings.IntoMap;
                 Fragment1Component.class,
                 Fragment2Component.class
         })
-public abstract class MainActivity2BindingModule {
+abstract class MainActivity2BindingModule {
 
     @Binds
     @IntoMap
     @FragmentKey(Fragment1.class)
-    public abstract FragmentComponentBuilder fragment1ComponentBuilder(Fragment1Component.Builder impl);
+    abstract FragmentComponentBuilder fragment1ComponentBuilder(Fragment1Component.Builder impl);
 
     @Binds
     @IntoMap
     @FragmentKey(Fragment2.class)
-    public abstract FragmentComponentBuilder fragment2ComponentBuilder(Fragment2Component.Builder impl);
+    abstract FragmentComponentBuilder fragment2ComponentBuilder(Fragment2Component.Builder impl);
 }

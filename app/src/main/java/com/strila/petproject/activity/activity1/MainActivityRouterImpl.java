@@ -12,11 +12,11 @@ import com.strila.petproject.fragment.fragment1.Fragment1;
  * Created by Serhii Strila on 1/12/17
  */
 
-public final class MainActivityRouterImpl implements MainActivityRouter {
+final class MainActivityRouterImpl implements MainActivityRouter {
 
     private MainActivity mActivity;
 
-    public MainActivityRouterImpl(MainActivity activity) {
+    MainActivityRouterImpl(MainActivity activity) {
         mActivity = activity;
         baseInit();
     }
