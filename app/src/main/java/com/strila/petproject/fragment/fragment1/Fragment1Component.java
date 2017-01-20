@@ -17,7 +17,6 @@ import dagger.Subcomponent;
 @Subcomponent(
         modules = {
                 Fragment1Component.Fragment1Module.class,
-                Fragment1Component.Fragment1ModuleBinds.class
         }
 )
 public interface Fragment1Component extends FragmentComponent<Fragment1> {
@@ -27,24 +26,23 @@ public interface Fragment1Component extends FragmentComponent<Fragment1> {
 
     }
 
-    @Module
-    class Fragment1Module extends FragmentModule<Fragment1> {
+    @Module(includes = Fragment1Module.Fragment1Declarations.class)
+    final class Fragment1Module extends FragmentModule<Fragment1> {
+
+        @Module
+        public interface Fragment1Declarations {
+
+            @FragmentScope
+            @Binds
+            Fragment1Contract.View bindView(Fragment1 fragment1);
+
+            @FragmentScope
+            @Binds
+            Fragment1Contract.Presenter bindPresenter(Fragment1Presenter presenter);
+        }
 
         Fragment1Module(Fragment1 fragment) {
             super(fragment);
         }
-
-    }
-
-    @Module
-    abstract class Fragment1ModuleBinds {
-
-        @FragmentScope
-        @Binds
-        abstract Fragment1Contract.View bindView(Fragment1 fragment1);
-
-        @FragmentScope
-        @Binds
-        abstract Fragment1Contract.Presenter bindPresenter(Fragment1Presenter presenter);
     }
 }
