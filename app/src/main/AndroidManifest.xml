@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".app.App"
+        android:name=".ui.app.App"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.activity1.MainActivity">
+        <activity android:name=".ui.flow1.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.activity2.MainActivity2" />
+        <activity android:name=".ui.flow2.MainActivity2" />
     </application>
 
 </manifest>
