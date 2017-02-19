@@ -20,27 +20,20 @@ import dagger.Subcomponent;
 public interface Fragment2Component extends FragmentComponent<Fragment2> {
 
     @Subcomponent.Builder
-    interface Builder extends FragmentComponentBuilder<Fragment2Module, Fragment2Component> {
+    interface Builder extends FragmentComponentBuilder<Fragment2, Fragment2Component> {
 
     }
 
-    @Module(includes = Fragment2Module.Fragment2Declarations.class)
-    final class Fragment2Module extends FragmentModule<Fragment2> {
+    @Module
+    abstract class Fragment2Module extends FragmentModule<Fragment2> {
 
-        @Module
-        public interface Fragment2Declarations {
+        @FragmentScope
+        @Binds
+        abstract Fragment2Contract.View bindView(Fragment2 fragment);
 
-            @FragmentScope
-            @Binds
-            Fragment2Contract.View bindView(Fragment2 fragment);
+        @FragmentScope
+        @Binds
+        abstract Fragment2Contract.Presenter bindPresenter(Fragment2Presenter presenter);
 
-            @FragmentScope
-            @Binds
-            Fragment2Contract.Presenter bindPresenter(Fragment2Presenter presenter);
-        }
-
-        Fragment2Module(Fragment2 fragment) {
-            super(fragment);
-        }
     }
 }

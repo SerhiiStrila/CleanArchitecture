@@ -3,7 +3,6 @@ package com.strila.petproject.di.base.fragment;
 import android.app.Fragment;
 
 import dagger.Module;
-import dagger.Provides;
 
 /**
  * Created by Serhii Strila on 1/11/17
@@ -12,15 +11,4 @@ import dagger.Provides;
 @Module
 public abstract class FragmentModule<T extends Fragment> {
 
-    protected final T fragment;
-
-    public FragmentModule(T fragment) {
-        this.fragment = fragment;
-    }
-
-    @FragmentScope
-    @Provides
-    public T provideFragment() {
-        return fragment;
-    }
 }

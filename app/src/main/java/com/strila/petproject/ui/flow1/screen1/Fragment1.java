@@ -50,7 +50,7 @@ public final class Fragment1 extends BaseFragment<Fragment1Contract.Presenter> i
     @Override
     protected void setupFragmentComponent(HasFragmentSubComponentBuilders builders) {
         ((Fragment1Component.Builder) builders.getFragmentComponentBuilder(Fragment1.class))
-                .module(new Fragment1Component.Fragment1Module(this))
+                .fragment(this)
                 .build()
                 .inject(this);
     }

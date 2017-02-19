@@ -31,19 +31,14 @@ public final class Fragment2 extends BaseFragment<Fragment2Contract.Presenter> i
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fragment2, container, false);
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.next();
-            }
-        });
+        view.setOnClickListener(v -> presenter.next());
         return view;
     }
 
     @Override
     protected void setupFragmentComponent(HasFragmentSubComponentBuilders builders) {
         ((Fragment2Component.Builder)builders.getFragmentComponentBuilder(Fragment2.class))
-                .module(new Fragment2Component.Fragment2Module(this))
+                .fragment(this)
                 .build()
                 .inject(this);
     }

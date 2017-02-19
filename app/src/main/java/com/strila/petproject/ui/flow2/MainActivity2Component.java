@@ -30,16 +30,12 @@ import dagger.Subcomponent;
 public interface MainActivity2Component extends ActivityComponent<MainActivity2> {
 
     @Subcomponent.Builder
-    interface Builder extends ActivityComponentBuilder<MainActivity2Module, MainActivity2Component> {
+    interface Builder extends ActivityComponentBuilder<MainActivity2, MainActivity2Component> {
 
     }
 
     @Module
-    final class MainActivity2Module extends ActivityModule<MainActivity2> {
-
-        MainActivity2Module(MainActivity2 activity) {
-            super(activity);
-        }
+    abstract class MainActivity2Module extends ActivityModule<MainActivity2> {
 
         @ActivityScope
         @Provides

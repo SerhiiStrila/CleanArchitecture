@@ -25,7 +25,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void setupActivityComponent(HasActivitySubComponentBuilders builders) {
         ((MainActivityComponent.Builder)builders.getActivityComponentBuilder(MainActivity.class))
-                .activityModule(new MainActivityComponent.MainActivityModule(this))
+                .activity(this)
                 .build()
                 .inject(this);
     }

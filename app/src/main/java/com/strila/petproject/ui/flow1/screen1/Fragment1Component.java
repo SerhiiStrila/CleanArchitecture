@@ -7,7 +7,6 @@ import com.strila.petproject.di.base.fragment.FragmentScope;
 
 import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 import dagger.Subcomponent;
 
 import static com.strila.petproject.ui.flow1.screen1.Fragment1Component.Fragment1Module;
@@ -25,33 +24,20 @@ import static com.strila.petproject.ui.flow1.screen1.Fragment1Component.Fragment
 public interface Fragment1Component extends FragmentComponent<Fragment1> {
 
     @Subcomponent.Builder
-    interface Builder extends FragmentComponentBuilder<Fragment1Module, Fragment1Component> {
+    interface Builder extends FragmentComponentBuilder<Fragment1, Fragment1Component> {
 
     }
 
-    @Module(includes = Fragment1Module.Fragment1Declarations.class)
-    final class Fragment1Module extends FragmentModule<Fragment1> {
-
-        @Module
-        public interface Fragment1Declarations {
-
-            @FragmentScope
-            @Binds
-            Fragment1Contract.View bindView(Screen1ViewModel fragment1);
-
-            @FragmentScope
-            @Binds
-            Fragment1Contract.Presenter bindPresenter(Fragment1Presenter presenter);
-        }
-
-        Fragment1Module(Fragment1 fragment) {
-            super(fragment);
-        }
+    @Module
+    abstract class Fragment1Module extends FragmentModule<Fragment1> {
 
         @FragmentScope
-        @Provides
-        static Screen1ViewModel vm() {
-            return new Screen1ViewModel();
-        }
+        @Binds
+        public abstract Fragment1Contract.View bindView(Screen1ViewModel viewModel);
+
+        @FragmentScope
+        @Binds
+        public abstract Fragment1Contract.Presenter bindPresenter(Fragment1Presenter presenter);
+
     }
 }

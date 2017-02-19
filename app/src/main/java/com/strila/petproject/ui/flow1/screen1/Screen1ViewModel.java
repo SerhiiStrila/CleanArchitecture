@@ -4,14 +4,22 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
 import com.strila.petproject.BR;
+import com.strila.petproject.di.base.fragment.FragmentScope;
+
+import javax.inject.Inject;
 
 /**
  * Created by Serhii Strila on 2/2/17
  */
 
-public class Screen1ViewModel extends BaseObservable implements Fragment1Contract.View {
+@FragmentScope
+public final class Screen1ViewModel extends BaseObservable implements Fragment1Contract.View {
 
     private boolean check = true;
+
+    @Inject
+    Screen1ViewModel() {
+    }
 
     @Bindable
     public boolean isCheck() {
