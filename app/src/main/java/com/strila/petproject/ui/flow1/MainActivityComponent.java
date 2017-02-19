@@ -5,8 +5,8 @@ import com.strila.petproject.di.base.activity.ActivityComponentBuilder;
 import com.strila.petproject.di.base.activity.ActivityModule;
 import com.strila.petproject.di.base.activity.ActivityScope;
 
+import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 import dagger.Subcomponent;
 
 /**
@@ -31,10 +31,8 @@ public interface MainActivityComponent extends ActivityComponent<MainActivity> {
     abstract class MainActivityModule extends ActivityModule<MainActivity> {
 
         @ActivityScope
-        @Provides
-        static MainActivityRouter provideRouter(MainActivity activity) {
-            return new MainActivityRouterImpl(activity);
-        }
+        @Binds
+        abstract MainActivityRouter provideRouter(MainActivityRouterImpl router);
 
     }
 }
