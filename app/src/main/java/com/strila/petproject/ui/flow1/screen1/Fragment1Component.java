@@ -7,7 +7,10 @@ import com.strila.petproject.di.base.fragment.FragmentScope;
 
 import dagger.Binds;
 import dagger.Module;
+import dagger.Provides;
 import dagger.Subcomponent;
+
+import static com.strila.petproject.ui.flow1.screen1.Fragment1Component.Fragment1Module;
 
 /**
  * Created by Serhii Strila on 1/11/17
@@ -16,7 +19,7 @@ import dagger.Subcomponent;
 @FragmentScope
 @Subcomponent(
         modules = {
-                Fragment1Component.Fragment1Module.class,
+                Fragment1Module.class,
         }
 )
 public interface Fragment1Component extends FragmentComponent<Fragment1> {
@@ -34,7 +37,7 @@ public interface Fragment1Component extends FragmentComponent<Fragment1> {
 
             @FragmentScope
             @Binds
-            Fragment1Contract.View bindView(Fragment1 fragment1);
+            Fragment1Contract.View bindView(Screen1ViewModel fragment1);
 
             @FragmentScope
             @Binds
@@ -43,6 +46,12 @@ public interface Fragment1Component extends FragmentComponent<Fragment1> {
 
         Fragment1Module(Fragment1 fragment) {
             super(fragment);
+        }
+
+        @FragmentScope
+        @Provides
+        static Screen1ViewModel vm() {
+            return new Screen1ViewModel();
         }
     }
 }

@@ -11,10 +11,20 @@ public interface Fragment1Contract {
 
     interface View extends BaseViewDelegate {
 
+        void showText();
     }
 
     interface Presenter extends BasePresenterDelegate {
 
         void next();
+
+        void doSomething();
+    }
+
+    interface Listener {
+
+        void onNextScreenClick();
+
+        void onButtonClick();
     }
 }

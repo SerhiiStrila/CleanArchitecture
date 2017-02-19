@@ -1,14 +1,46 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.strila.petproject.fragment.fragment1.Fragment1">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.strila.petproject.ui.flow1.screen1.Screen1ViewModel" />
+
+        <variable
+            name="listener"
+            type="com.strila.petproject.ui.flow1.screen1.Fragment1Contract.Listener" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment1"
-        android:textSize="24sp" />
+        android:onClick="@{v -> listener.onNextScreenClick()}"
+        tools:context="com.strila.petproject.ui.flow1.screen1.Fragment1">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/fragment1.hello.blank1"
+            android:textSize="24sp"
+            android:visibility="@{viewModel.check ? View.VISIBLE : View.GONE}" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@={viewModel.check}" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:onClick="@{v -> listener.onButtonClick()}"
+            android:text="@string/fragment1.show" />
+
+    </FrameLayout>
+
+</layout>

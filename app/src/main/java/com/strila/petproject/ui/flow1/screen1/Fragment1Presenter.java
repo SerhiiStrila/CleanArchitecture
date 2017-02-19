@@ -29,4 +29,9 @@ public final class Fragment1Presenter extends BasePresenter<Fragment1Contract.Vi
     public void next() {
         router.goNext();
     }
+
+    @Override
+    public void doSomething() {
+        view.showText();
+    }
 }

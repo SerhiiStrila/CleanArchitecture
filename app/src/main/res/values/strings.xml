@@ -1,6 +1,10 @@
 <resources>
+
     <string name="app_name">PetProject</string>
 
-    <string name="hello_blank_fragment1">Hello blank fragment 1</string>
-    <string name="hello_blank_fragment2">Hello blank fragment 2</string>
+    <string name="fragment1.show">Show</string>
+    <string name="fragment1.hello.blank1">Hello blank fragment 1</string>
+
+    <string name="fragment2.hello.blank2">Hello blank fragment 2</string>
+
 </resources>
