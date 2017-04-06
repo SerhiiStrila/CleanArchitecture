@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_right_normal">16dp</dimen>
+    <dimen name="padding_left_normal">16dp</dimen>
+    <dimen name="padding_top_normal">16dp</dimen>
+    <dimen name="padding_bottom_normal">16dp</dimen>
+
+    <dimen name="padding_right_0x">0dp</dimen>
+    <dimen name="padding_left_0x">0dp</dimen>
+
+    <dimen name="padding_0.25x">4dp</dimen>
+    <dimen name="padding_right_0.25x">4dp</dimen>
+    <dimen name="padding_left_0.25x">4dp</dimen>
+    <dimen name="padding_top_0.25x">4dp</dimen>
+    <dimen name="padding_bottom_0.25x">4dp</dimen>
+
+    <dimen name="padding_0.5x">8dp</dimen>
+    <dimen name="padding_right_0.5x">8dp</dimen>
+    <dimen name="padding_left_0.5x">8dp</dimen>
+    <dimen name="padding_top_0.5x">8dp</dimen>
+    <dimen name="padding_bottom_0.5x">8dp</dimen>
+
+    <dimen name="padding_0.75x">12dp</dimen>
+
+    <dimen name="padding_1.5x">24dp</dimen>
+    <dimen name="padding_right_1.5x">24dp</dimen>
+    <dimen name="padding_left_1.5x">24dp</dimen>
+    <dimen name="padding_top_1.5x">24dp</dimen>
+    <dimen name="padding_bottom_1.5x">24dp</dimen>
+
+    <dimen name="padding_2x">32dp</dimen>
+    <dimen name="padding_right_2x">32dp</dimen>
+    <dimen name="padding_left_2x">32dp</dimen>
+    <dimen name="padding_top_2x">32dp</dimen>
+    <dimen name="padding_bottom_2x">32dp</dimen>
+
+    <dimen name="padding_3x">48dp</dimen>
+    <dimen name="padding_right_3x">48dp</dimen>
+    <dimen name="padding_left_3x">48dp</dimen>
+    <dimen name="padding_top_3x">48dp</dimen>
+    <dimen name="padding_bottom_3x">48dp</dimen>
+
+    <dimen name="margin_left_0x">0dp</dimen>
+    <dimen name="margin_right_0x">0dp</dimen>
+
+    <dimen name="margin_0.5x">8dp</dimen>
+    <dimen name="margin_right_0.5x">8dp</dimen>
+    <dimen name="margin_left_0.5x">8dp</dimen>
+    <dimen name="margin_top_0.5x">8dp</dimen>
+    <dimen name="margin_bottom_0.5x">8dp</dimen>
+
+    <dimen name="margin_0.25x">4dp</dimen>
+    <dimen name="margin_right_0.25x">4dp</dimen>
+    <dimen name="margin_left_0.25x">4dp</dimen>
+    <dimen name="margin_top_0.25x">4dp</dimen>
+    <dimen name="margin_bottom_0.25x">4dp</dimen>
+
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_right_normal">16dp</dimen>
+    <dimen name="margin_left_normal">16dp</dimen>
+    <dimen name="margin_top_normal">16dp</dimen>
+    <dimen name="margin_bottom_normal">16dp</dimen>
+
+    <dimen name="margin_1.5x">24dp</dimen>
+    <dimen name="margin_right_1.5x">24dp</dimen>
+    <dimen name="margin_left_1.5x">24dp</dimen>
+    <dimen name="margin_top_1.5x">24dp</dimen>
+    <dimen name="margin_bottom_1.5x">24dp</dimen>
+
+    <dimen name="margin_2x">32dp</dimen>
+    <dimen name="margin_right_2x">32dp</dimen>
+    <dimen name="margin_left_2x">32dp</dimen>
+    <dimen name="margin_top_2x">32dp</dimen>
+    <dimen name="margin_bottom_2x">32dp</dimen>
+
+    <dimen name="margin_bottom_2.5x">48dp</dimen>
+
+    <dimen name="margin_3x">48dp</dimen>
+    <dimen name="margin_right_3x">48dp</dimen>
+    <dimen name="margin_left_3x">48dp</dimen>
+    <dimen name="margin_top_3x">48dp</dimen>
+    <dimen name="margin_bottom_3x">48dp</dimen>
+
+    <dimen name="width_default_indicator">48dp</dimen>
+    <dimen name="height_default_indicator">48dp</dimen>
+</resources>
