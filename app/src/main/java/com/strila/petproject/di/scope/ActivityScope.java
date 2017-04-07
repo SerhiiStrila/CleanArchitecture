@@ -1,4 +1,4 @@
-package com.strila.petproject.di.base.activity;
+package com.strila.petproject.di.scope;
 
 import javax.inject.Scope;
 

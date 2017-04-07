@@ -1,11 +1,10 @@
 package com.strila.petproject.ui.base;
 
 import android.app.Fragment;
-import android.os.Bundle;
+import android.content.Context;
 import android.support.annotation.CallSuper;
-import android.support.annotation.Nullable;
 
-import com.strila.petproject.di.base.fragment.HasFragmentSubComponentBuilders;
+import dagger.android.AndroidInjection;
 
 
 /**
@@ -16,9 +15,9 @@ public abstract class BaseFragment<T extends BasePresenterDelegate> extends Frag
 
     @CallSuper
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setupFragmentComponent((HasFragmentSubComponentBuilders) getActivity());
+    public void onAttach(Context context) {
+        AndroidInjection.inject(this);
+        super.onAttach(context);
     }
 
     @CallSuper
@@ -27,8 +26,6 @@ public abstract class BaseFragment<T extends BasePresenterDelegate> extends Frag
         super.onDestroyView();
         getPresenter().detach();
     }
-
-    protected abstract void setupFragmentComponent(HasFragmentSubComponentBuilders builders);
 
     protected abstract T getPresenter();
 

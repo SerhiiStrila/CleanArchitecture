@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.strila.petproject.databinding.FragmentFragment1Binding;
-import com.strila.petproject.di.base.fragment.HasFragmentSubComponentBuilders;
 import com.strila.petproject.ui.base.BaseFragment;
 
 import javax.inject.Inject;
@@ -45,14 +44,6 @@ public final class Fragment1 extends BaseFragment<Fragment1Contract.Presenter> i
     @Override
     public void onButtonClick() {
         presenter.doSomething();
-    }
-
-    @Override
-    protected void setupFragmentComponent(HasFragmentSubComponentBuilders builders) {
-        ((Fragment1Component.Builder) builders.getFragmentComponentBuilder(Fragment1.class))
-                .fragment(this)
-                .build()
-                .inject(this);
     }
 
     @Override

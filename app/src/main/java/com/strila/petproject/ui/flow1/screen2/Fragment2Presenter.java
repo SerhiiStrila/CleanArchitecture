@@ -3,7 +3,7 @@ package com.strila.petproject.ui.flow1.screen2;
 import android.support.annotation.NonNull;
 
 import com.strila.petproject.data.User;
-import com.strila.petproject.di.base.fragment.FragmentScope;
+import com.strila.petproject.di.scope.FragmentScope;
 import com.strila.petproject.ui.base.BasePresenter;
 import com.strila.petproject.ui.flow1.MainActivityRouter;
 

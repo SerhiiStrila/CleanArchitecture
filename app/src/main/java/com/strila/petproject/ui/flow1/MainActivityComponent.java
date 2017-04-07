@@ -1,13 +1,17 @@
 package com.strila.petproject.ui.flow1;
 
-import com.strila.petproject.di.base.activity.ActivityComponent;
-import com.strila.petproject.di.base.activity.ActivityComponentBuilder;
-import com.strila.petproject.di.base.activity.ActivityModule;
-import com.strila.petproject.di.base.activity.ActivityScope;
+import android.app.Activity;
+
+import com.strila.petproject.di.scope.ActivityScope;
+import com.strila.petproject.ui.flow1.screen1.Fragment1Component;
+import com.strila.petproject.ui.flow1.screen2.Fragment2Component;
 
 import dagger.Binds;
 import dagger.Module;
 import dagger.Subcomponent;
+import dagger.android.ActivityKey;
+import dagger.android.AndroidInjector;
+import dagger.multibindings.IntoMap;
 
 /**
  * Created by Serhii Strila on 1/11/17
@@ -16,19 +20,24 @@ import dagger.Subcomponent;
 @ActivityScope
 @Subcomponent(
         modules = {
-                MainActivityComponent.MainActivityModule.class,
-                MainActivityBindingModule.class
-        }
-)
-public interface MainActivityComponent extends ActivityComponent<MainActivity> {
+                Fragment1Component.Fragment1Module.class,
+                Fragment2Component.Fragment2Module.class
+        })
+public interface MainActivityComponent extends AndroidInjector<MainActivity> {
 
     @Subcomponent.Builder
-    interface Builder extends ActivityComponentBuilder<MainActivity, MainActivityComponent> {
+    abstract class Builder extends AndroidInjector.Builder<MainActivity> {
 
     }
 
-    @Module
-    abstract class MainActivityModule extends ActivityModule<MainActivity> {
+    @Module(subcomponents = MainActivityComponent.class)
+    abstract class MainActivityModule {
+
+        @Binds
+        @IntoMap
+        @ActivityKey(MainActivity.class)
+        abstract AndroidInjector.Factory<? extends Activity>
+        bindMainActivityInjectorFactory(MainActivityComponent.Builder builder);
 
         @ActivityScope
         @Binds

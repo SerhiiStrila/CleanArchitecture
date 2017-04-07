@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.strila.petproject.data.User;
 import com.strila.petproject.databinding.FragmentFragment2Binding;
-import com.strila.petproject.di.base.fragment.HasFragmentSubComponentBuilders;
 import com.strila.petproject.ui.base.BaseFragment;
 import com.strila.petproject.ui.flow1.screen2.list.UserAdapter;
 import com.strila.petproject.utils.EndlessListener;
@@ -67,14 +66,6 @@ public final class Fragment2 extends BaseFragment<Fragment2Contract.Presenter> i
     @Override
     public void showLoading(boolean loading) {
         mUserAdapter.setLoadingVisibility(loading);
-    }
-
-    @Override
-    protected void setupFragmentComponent(HasFragmentSubComponentBuilders builders) {
-        ((Fragment2Component.Builder) builders.getFragmentComponentBuilder(Fragment2.class))
-                .fragment(this)
-                .build()
-                .inject(this);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.strila.petproject.ui.flow1;
 
-import com.strila.petproject.di.base.activity.ActivityScope;
+import com.strila.petproject.di.scope.ActivityScope;
 import com.strila.petproject.ui.flow1.screen1.Fragment1;
 import com.strila.petproject.ui.flow1.screen2.Fragment2;
 import com.strila.petproject.utils.ActivityUtils;

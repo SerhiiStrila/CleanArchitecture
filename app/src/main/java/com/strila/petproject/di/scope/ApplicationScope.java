@@ -1,4 +1,4 @@
-package com.strila.petproject.di.base.app;
+package com.strila.petproject.di.scope;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

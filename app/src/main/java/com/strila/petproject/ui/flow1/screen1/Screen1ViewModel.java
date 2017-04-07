@@ -4,7 +4,7 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
 import com.strila.petproject.BR;
-import com.strila.petproject.di.base.fragment.FragmentScope;
+import com.strila.petproject.di.scope.FragmentScope;
 
 import javax.inject.Inject;
 

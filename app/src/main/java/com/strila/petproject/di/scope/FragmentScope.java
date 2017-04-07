@@ -1,4 +1,4 @@
-package com.strila.petproject.di.base.fragment;
+package com.strila.petproject.di.scope;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
