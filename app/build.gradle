@@ -24,35 +24,39 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    flavorDimensions "appId"
+
     productFlavors {
         dev {
+            dimension "appId"
             applicationId "com.strila.petproject.develop"
         }
 
         prod {
+            dimension "appId"
             applicationId "com.strila.petproject"
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
     })
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile "com.android.support:support-annotations:$rootProject.supportVersion"
-    compile "com.android.support:support-v4:$rootProject.supportVersion"
-    compile "com.android.support:recyclerview-v7:$rootProject.supportVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.android.support:support-annotations:$rootProject.supportVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportVersion"
 
-    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
-    compile "com.google.dagger:dagger-android:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"
 
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.0.4'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
 }
