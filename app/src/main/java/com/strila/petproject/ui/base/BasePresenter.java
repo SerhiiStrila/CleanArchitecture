@@ -1,5 +1,6 @@
 package com.strila.petproject.ui.base;
 
+import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 
@@ -11,7 +12,7 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public abstract class BasePresenter<T extends BaseViewDelegate, R extends Router> implements BasePresenterDelegate {
 
-    @NonNull protected CompositeDisposable mDisposables = new CompositeDisposable();
+    @NonNull protected CompositeDisposable disposables = new CompositeDisposable();
     @NonNull protected T view;
     @NonNull protected R router;
 
@@ -29,6 +30,16 @@ public abstract class BasePresenter<T extends BaseViewDelegate, R extends Router
     @CallSuper
     @Override
     public void detach() {
-        mDisposables.dispose();
+        disposables.dispose();
+    }
+
+    @Override
+    public void saveState(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void restoreState(Bundle savedInstanceState) {
+
     }
 }

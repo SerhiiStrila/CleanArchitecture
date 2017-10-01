@@ -1,10 +1,11 @@
 <resources>
 
-    <string name="app_name">PetProject</string>
+    <string name="app_name">Reddit App</string>
 
-    <string name="fragment1.show">Show</string>
-    <string name="fragment1.hello.blank1">Hello blank fragment 1</string>
-
-    <string name="fragment2.hello.blank2">Hello blank fragment 2</string>
+    <string name="comments">%d Comments</string>
+    <string name="thumb_transition">Thumb</string>
+    <string name="image">Image</string>
+    <string name="top">Reddit Top</string>
+    <string name="share_image">Share Image!</string>
 
 </resources>

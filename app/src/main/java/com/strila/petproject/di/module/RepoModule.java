@@ -1,7 +1,7 @@
 package com.strila.petproject.di.module;
 
-import com.strila.petproject.data.source.DataRepo;
-import com.strila.petproject.data.source.DataRepoImpl;
+import com.strila.petproject.data.source.repo.DataRepo;
+import com.strila.petproject.data.source.repo.DataRepoImpl;
 import com.strila.petproject.di.scope.ApplicationScope;
 
 import dagger.Binds;

@@ -6,8 +6,7 @@ import com.strila.petproject.di.module.LocalDataModule;
 import com.strila.petproject.di.module.NetworkModule;
 import com.strila.petproject.di.module.RepoModule;
 import com.strila.petproject.di.scope.ApplicationScope;
-import com.strila.petproject.ui.flow1.MainActivityComponent;
-import com.strila.petproject.ui.flow2.MainActivity2Component;
+import com.strila.petproject.ui.main.MainActivityComponent;
 
 import dagger.Component;
 import dagger.Module;
@@ -26,28 +25,21 @@ import dagger.android.AndroidInjector;
                 NetworkModule.class,
                 LocalDataModule.class,
                 MainActivityComponent.MainActivityModule.class,
-                MainActivity2Component.MainActivity2Module.class
         }
 )
 interface AppComponent extends AndroidInjector<App> {
 
     @Component.Builder
     abstract class Builder extends AndroidInjector.Builder<App> {
-        abstract Builder appModule(AppModule appModule);
+
     }
 
     @Module
     class AppModule {
 
-        private App app;
-
-        AppModule(App app) {
-            this.app = app;
-        }
-
         @ApplicationScope
         @Provides
-        Context provideContext() {
+        Context provideContext(App app) {
             return app;
         }
     }

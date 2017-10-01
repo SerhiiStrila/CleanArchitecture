@@ -3,7 +3,7 @@ package com.strila.petproject.di.module;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.strila.petproject.BuildConfig;
-import com.strila.petproject.data.source.RedditApi;
+import com.strila.petproject.data.source.network.RedditApi;
 import com.strila.petproject.di.scope.ApplicationScope;
 import com.strila.petproject.utils.DateConverter;
 
@@ -13,6 +13,8 @@ import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Serhii Strila on 10/1/17
@@ -33,6 +35,8 @@ public abstract class NetworkModule {
         return new Retrofit.Builder()
                 .baseUrl(BuildConfig.HOST)
                 .client(client)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }
 

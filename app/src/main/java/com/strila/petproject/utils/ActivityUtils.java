@@ -16,8 +16,22 @@ public class ActivityUtils {
      * performed by the {@code fragmentManager}.
      */
     public static void replaceFragmentInActivity(@NonNull FragmentManager fragmentManager,
-            @NonNull Fragment fragment,
-            boolean addBackStack) {
+                                                 @NonNull Fragment fragment,
+                                                 boolean addBackStack) {
+        checkNotNull(fragmentManager);
+        checkNotNull(fragment);
+        String tag = fragment.getClass().getName();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        if (addBackStack) {
+            transaction.addToBackStack(tag);
+        }
+        transaction.replace(R.id.container, fragment, tag);
+        transaction.commit();
+    }
+
+    public static void addFragmentInActivity(@NonNull FragmentManager fragmentManager,
+                                             @NonNull Fragment fragment,
+                                             boolean addBackStack) {
         checkNotNull(fragmentManager);
         checkNotNull(fragment);
         String tag = fragment.getClass().getName();

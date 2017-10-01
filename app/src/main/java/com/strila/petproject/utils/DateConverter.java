@@ -19,8 +19,10 @@ public class DateConverter implements JsonDeserializer<Date> {
     public Date deserialize(JsonElement json, Type typeOfT,
                             JsonDeserializationContext context)
             throws JsonParseException {
-        long time = json.getAsLong();
-        return new Date(time + TimeZone.getDefault().getOffset(System.currentTimeMillis()));
+        long time = json.getAsJsonPrimitive().getAsLong();
+        long timeMillis = time * 1000;
+        return new Date(timeMillis + TimeZone.getDefault().getOffset(System.currentTimeMillis()));
+
     }
 
 }
