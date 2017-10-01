@@ -2,7 +2,8 @@ package com.strila.petproject.ui.flow1.screen2;
 
 import android.support.annotation.NonNull;
 
-import com.strila.petproject.data.User;
+import com.strila.petproject.data.interactor.PostInteractor;
+import com.strila.petproject.data.models.User;
 import com.strila.petproject.di.scope.FragmentScope;
 import com.strila.petproject.ui.base.BasePresenter;
 import com.strila.petproject.ui.flow1.MainActivityRouter;
@@ -24,6 +25,8 @@ import io.reactivex.schedulers.Schedulers;
 @FragmentScope
 public final class Fragment2Presenter extends BasePresenter<Fragment2Contract.View, MainActivityRouter>
         implements Fragment2Contract.Presenter {
+
+    @Inject PostInteractor postInteractor;
 
     @Inject
     Fragment2Presenter(@NonNull Fragment2Contract.View view, @NonNull MainActivityRouter router) {

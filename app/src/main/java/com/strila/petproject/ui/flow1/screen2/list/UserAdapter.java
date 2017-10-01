@@ -6,7 +6,7 @@ import android.support.v7.widget.util.SortedListAdapterCallback;
 import android.view.View;
 
 import com.strila.petproject.R;
-import com.strila.petproject.data.User;
+import com.strila.petproject.data.models.User;
 import com.strila.petproject.utils.UltimateAdapter;
 
 /**

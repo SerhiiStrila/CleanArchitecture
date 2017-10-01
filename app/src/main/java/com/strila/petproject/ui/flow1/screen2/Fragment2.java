@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.strila.petproject.data.User;
+import com.strila.petproject.data.models.User;
 import com.strila.petproject.databinding.FragmentFragment2Binding;
 import com.strila.petproject.ui.base.BaseFragment;
 import com.strila.petproject.ui.flow1.screen2.list.UserAdapter;

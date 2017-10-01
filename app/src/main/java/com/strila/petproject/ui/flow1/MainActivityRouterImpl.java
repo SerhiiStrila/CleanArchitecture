@@ -19,7 +19,6 @@ final class MainActivityRouterImpl implements MainActivityRouter {
     @Inject
     MainActivityRouterImpl(MainActivity activity) {
         mActivity = activity;
-        baseInit();
     }
 
 
@@ -28,7 +27,9 @@ final class MainActivityRouterImpl implements MainActivityRouter {
         ActivityUtils.replaceFragmentInActivity(mActivity.getFragmentManager(), Fragment2.newInstance(), true);
     }
 
-    private void baseInit() {
+    @Override
+    public void init() {
         ActivityUtils.replaceFragmentInActivity(mActivity.getFragmentManager(), Fragment1.newInstance(), false);
     }
+
 }

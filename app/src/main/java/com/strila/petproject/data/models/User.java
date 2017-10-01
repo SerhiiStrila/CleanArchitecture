@@ -1,4 +1,4 @@
-package com.strila.petproject.data;
+package com.strila.petproject.data.models;
 
 import java.util.Date;
 
@@ -18,6 +18,10 @@ public class User {
         createdAt = builder.createdAt;
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
+
     public long getId() {
         return id;
     }
@@ -29,11 +33,6 @@ public class User {
     public Date getCreatedAt() {
         return createdAt;
     }
-
-    public static Builder builder() {
-        return new Builder();
-    }
-
 
     public static final class Builder {
 

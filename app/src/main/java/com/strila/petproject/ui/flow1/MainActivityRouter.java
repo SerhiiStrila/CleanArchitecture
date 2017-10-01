@@ -10,4 +10,5 @@ public interface MainActivityRouter extends Router {
 
     void goNext();
 
+    void init();
 }

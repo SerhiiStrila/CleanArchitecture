@@ -4,7 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.strila.petproject.data.User;
+import com.strila.petproject.data.models.User;
 import com.strila.petproject.databinding.ItemUserBinding;
 
 /**

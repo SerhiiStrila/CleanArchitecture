@@ -1,6 +1,6 @@
 package com.strila.petproject.ui.flow1.screen2;
 
-import com.strila.petproject.data.User;
+import com.strila.petproject.data.models.User;
 import com.strila.petproject.ui.base.BasePresenterDelegate;
 import com.strila.petproject.ui.base.BaseViewDelegate;
 
